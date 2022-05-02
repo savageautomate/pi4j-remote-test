@@ -50,9 +50,10 @@ public class DigitalInputExample {
         console.println();
 
         var config = DigitalInput.newConfigBuilder(pi4j)
-                        .id("led")
-                        .name("LED Flasher")
+                        .id("button")
+                        .name("My Input Button")
                         .address(GPIO_PIN)
+                        .debounce(1000L)
                         .pull(PullResistance.PULL_DOWN)
                         .provider("linuxfs-digital-input");
 
