@@ -1,0 +1,4 @@
+com/pi4j/remote/PwmExample.class
+com/pi4j/remote/DigitalOutputExample.class
+module-info.class
+com/pi4j/remote/DigitalInputExample.class

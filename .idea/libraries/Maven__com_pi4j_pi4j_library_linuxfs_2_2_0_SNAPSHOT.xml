@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.pi4j:pi4j-library-linuxfs:2.2.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/pi4j/pi4j-library-linuxfs/2.2.0-SNAPSHOT/pi4j-library-linuxfs-2.2.0-20220429.062957-14.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/pi4j/pi4j-library-linuxfs/2.2.0-SNAPSHOT/pi4j-library-linuxfs-2.2.0-20220429.062957-14-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/pi4j/pi4j-library-linuxfs/2.2.0-SNAPSHOT/pi4j-library-linuxfs-2.2.0-20220429.062957-14-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
