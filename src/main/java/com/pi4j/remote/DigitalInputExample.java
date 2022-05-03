@@ -9,9 +9,11 @@ import com.pi4j.Pi4J;
 import com.pi4j.context.Context;
 import com.pi4j.io.gpio.digital.DigitalInput;
 import com.pi4j.io.gpio.digital.PullResistance;
+import com.pi4j.library.linuxfs.gpio.*;
 import com.pi4j.platform.Platforms;
 import com.pi4j.util.Console;
 
+import java.io.FileInputStream;
 import java.lang.reflect.InvocationTargetException;
 
 
@@ -42,6 +44,7 @@ public class DigitalInputExample {
     }
 
     private void run(Context pi4j) throws Exception {
+
         Platforms platforms = pi4j.platforms();
 
         console.box("Pi4J PLATFORMS");
@@ -60,19 +63,25 @@ public class DigitalInputExample {
         // create digital iput I/O instance using configuration
         var input = pi4j.create(config);
 
-        int counter = 0;
-        while (counter < 500) {
-
+        // register input event listener
+        input.addListener(event -> {
             System.out.println();
             System.out.println("-----------------------------------------");
-            System.out.println("DIGITAL INPUT STATE : " + input.state().getName());
+            System.out.println("DIGITAL INPUT EVENT : " + event.toString());
             System.out.println("-----------------------------------------");
+        });
 
-            // one second rest
+        // display initial state
+        System.out.println();
+        System.out.println("-----------------------------------------");
+        System.out.println("DIGITAL INPUT STATE : " + input.state().toString());
+        System.out.println("-----------------------------------------");
+
+        int counter = 0;
+        while (counter < 500) {
             Thread.sleep(1000);
-
-            // increment loop iteration counter
             counter++;
         }
     }
 }
+
