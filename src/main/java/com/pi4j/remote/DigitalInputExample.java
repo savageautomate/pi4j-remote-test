@@ -9,11 +9,9 @@ import com.pi4j.Pi4J;
 import com.pi4j.context.Context;
 import com.pi4j.io.gpio.digital.DigitalInput;
 import com.pi4j.io.gpio.digital.PullResistance;
-import com.pi4j.library.linuxfs.gpio.*;
 import com.pi4j.platform.Platforms;
 import com.pi4j.util.Console;
 
-import java.io.FileInputStream;
 import java.lang.reflect.InvocationTargetException;
 
 
